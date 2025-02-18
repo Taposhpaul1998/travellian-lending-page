@@ -4,7 +4,7 @@ import MenuBer from './MenuBer'
 
 function Header() {
     return (
-        <div className='sticky top-0 z-50  bg-blue-500'>
+        <div className='sticky top-0 z-50  bg-gray-600 py-8'>
             {/*  header logo  */}
             <div className=' flex justify-between items-center w-[1376px] m-auto'>
                 <Link to='/' className='flex items-center'>
@@ -26,6 +26,17 @@ function Header() {
                 </Link>
 
                 <MenuBer />
+
+                <div className='flex items-center gap-9'>
+                    <Link
+                        to='/login'
+                        className={`text-[20px] font-rubik font-light text-white relative after:content-[''] after:w-0 hover:after:w-full after:h-[2px] after:border-none after:bg-[#FF7757] after:absolute after:bottom-0 after:left-0  after:rounded-full after:duration-300`}
+                    >Login</Link>
+                    <Link
+                        to='/singUP'
+                        className=' text-[20px] font-rubik font-light text-white bg-[#FF7757] px-8 py-5 rounded-xl '
+                    >Singup</Link>
+                </div>
             </div>
         </div>
     )
